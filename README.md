@@ -31,6 +31,10 @@ A completed Windows security lab in which I created, tested and audited inbound 
 8. Reviewed effective rules through PowerShell and the firewall console.
 9. Removed or disabled temporary test rules after validation.
 
+## Repairs and remediation performed
+
+The first rule tests produced inconsistent results because some rules were assigned to the wrong network profile and one test rule was broader than required. I corrected the profile, protocol, port and scope settings, removed the conflicting temporary rule, enabled logging and repeated the allowed and blocked traffic tests. The effective rule set then matched the intended design.
+
 ## Validation commands
 
 ```powershell
@@ -74,6 +78,8 @@ The endpoint enforced the intended inbound and outbound controls according to ne
 - No real production addresses or application paths are included.
 - Temporary test rules were controlled and removed after validation.
 - The lab was completed in a non-production environment.
+
+**This was tested by me to be working. User experience may vary.**
 
 ## Author
 
